@@ -1,0 +1,52 @@
+### Refactoring Detected:
+
+1. **Class Name Change**:
+   - **Original Section**: 
+     ```java
+     package org.reptile;
+
+     public class Turtle {
+     ```
+   - **Refactored Section**: 
+     ```java
+     package org.reptile;
+
+     public class Reptile {
+     ```
+   - **Refactoring Type**: The class name has been changed from `Turtle` to `Reptile`.
+
+2. **Access Modifier Change**:
+   - **Original Section**: 
+     ```java
+     private int age;
+     private int name;
+     private int spead;
+     private String action;
+     ```
+   - **Refactored Section**: 
+     ```java
+     protected int age;
+     protected int name;
+     protected int spead;
+     protected String action;
+     ```
+   - **Refactoring Type**: The access modifiers for the fields have been changed from `private` to `protected`.
+
+3. **Constructor Change**:
+   - **Original Section**: 
+     ```java
+     public Turtle() {
+     }
+     ```
+   - **Refactored Section**: 
+     ```java
+     public Reptile() {
+         super();
+     }
+     ```
+   - **Refactoring Type**: The constructor for the `Turtle` class has been changed to call the superclass constructor using `super()`.
+
+### Summary:
+- **Class Name Change**: Renamed `Turtle` to `Reptile`.
+- **Access Modifier Change**: Changed all fields from `private` to `protected`.
+- **Constructor Change**: Modified the default constructor of `Turtle` to call the superclass constructor.

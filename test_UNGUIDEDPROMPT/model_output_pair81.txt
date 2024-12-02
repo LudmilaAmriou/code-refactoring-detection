@@ -1,0 +1,5 @@
+- **Original Section:** `package org.animals;`
+- **Refactored Section:** `package org.birds;`
+- **Refactoring Type:** Package Rename
+
+The package name has been changed from `org.animals` to `org.birds`. This is a simple refactoring that involves renaming the package directory and updating all references within it.

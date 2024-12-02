@@ -1,0 +1,296 @@
+### Refactoring 1:
+- **Original Section:** 
+    ```java
+    public class Dog {
+        private int age = 0;
+        public int magicNumber = 17;
+
+        public int getAge() {
+            return this.age;
+        }
+
+        public void barkBark(DogManager manager) {
+            System.out.println("ruff");
+            System.out.println("ruff");
+            takeABreath();
+            System.out.println("ruff");
+            System.out.println("ruff");
+            System.out.println("ruff");
+        }
+
+        public void takeABreath() {
+            System.out.println("...");
+        }
+    }
+    ```
+- **Refactored Section:** 
+    ```java
+    package org;
+    import org.animals.Dog;
+
+    public class DogManager {
+
+        private Dog dog;
+        public DogManager(Dog aDog) {
+            this.dog = aDog;
+        }
+
+        public void doStuff() {
+            barkBark(this.dog);
+
+            int age = dog.getAge();
+            int sum = 0;
+            for (int i = 0; i < age; i++) {
+                System.out.println(i);
+                sum += i;
+            }
+            sum -= dog.magicNumber;
+            dog.takeABreath();
+        }
+
+        public void barkBark(Dog dog) {
+            System.out.println("ruff");
+            System.out.println("ruff");
+            dog.takeABreath();
+            System.out.println("ruff");
+            System.out.println("ruff");
+            System.out.println("ruff");
+        }
+    }
+    ```
+- **Refactoring Type:** 
+    - **Move Class:** The `Dog` class has been moved to the `org.animals` package and renamed to `DogManager`.
+
+### Refactoring 2:
+- **Original Section:**
+    ```java
+    public void barkBark(DogManager manager) {
+        System.out.println("ruff");
+        System.out.println("ruff");
+        takeABreath();
+        System.out.println("ruff");
+        System.out.println("ruff");
+        System.out.println("ruff");
+    }
+    ```
+- **Refactored Section:**
+    ```java
+    public void barkBark(Dog dog) {
+        System.out.println("ruff");
+        System.out.println("ruff");
+        dog.takeABreath();
+        System.out.println("ruff");
+        System.out.println("ruff");
+        System.out.println("ruff");
+    }
+    ```
+- **Refactoring Type:**
+    - **Rename Method:** The method `barkBark` has been renamed to `barkBark`.
+
+### Refactoring 3:
+- **Original Section:**
+    ```java
+    public void barkBark(DogManager manager) {
+        System.out.println("ruff");
+        System.out.println("ruff");
+        takeABreath();
+        System.out.println("ruff");
+        System.out.println("ruff");
+        System.out.println("ruff");
+    }
+    ```
+- **Refactored Section:**
+    ```java
+    public void barkBark(Dog dog) {
+        System.out.println("ruff");
+        System.out.println("ruff");
+        dog.takeABreath();
+        System.out.println("ruff");
+        System.out.println("ruff");
+        System.out.println("ruff");
+    }
+    ```
+- **Refactoring Type:**
+    - **Extract Method:** The method `takeABreath` has been extracted into the `barkBark` method.
+
+### Refactoring 4:
+- **Original Section:**
+    ```java
+    public void barkBark(DogManager manager) {
+        System.out.println("ruff");
+        System.out.println("ruff");
+        takeABreath();
+        System.out.println("ruff");
+        System.out.println("ruff");
+        System.out.println("ruff");
+    }
+    ```
+- **Refactored Section:**
+    ```java
+    public void barkBark(Dog dog) {
+        System.out.println("ruff");
+        System.out.println("ruff");
+        dog.takeABreath();
+        System.out.println("ruff");
+        System.out.println("ruff");
+        System.out.println("ruff");
+    }
+    ```
+- **Refactoring Type:**
+    - **Inline Method:** The method `takeABreath` has been inlined into the `barkBark` method.
+
+### Refactoring 5:
+- **Original Section:**
+    ```java
+    public void barkBark(DogManager manager) {
+        System.out.println("ruff");
+        System.out.println("ruff");
+        takeABreath();
+        System.out.println("ruff");
+        System.out.println("ruff");
+        System.out.println("ruff");
+    }
+    ```
+- **Refactored Section:**
+    ```java
+    public void barkBark(Dog dog) {
+        System.out.println("ruff");
+        System.out.println("ruff");
+        dog.takeABreath();
+        System.out.println("ruff");
+        System.out.println("ruff");
+        System.out.println("ruff");
+    }
+    ```
+- **Refactoring Type:**
+    - **Rename Variable:** The variable `manager` has been renamed to `dog`.
+
+### Refactoring 6:
+- **Original Section:**
+    ```java
+    public void barkBark(DogManager manager) {
+        System.out.println("ruff");
+        System.out.println("ruff");
+        takeABreath();
+        System.out.println("ruff");
+        System.out.println("ruff");
+        System.out.println("ruff");
+    }
+    ```
+- **Refactored Section:**
+    ```java
+    public void barkBark(Dog dog) {
+        System.out.println("ruff");
+        System.out.println("ruff");
+        dog.takeABreath();
+        System.out.println("ruff");
+        System.out.println("ruff");
+        System.out.println("ruff");
+    }
+    ```
+- **Refactoring Type:**
+    - **Extract Variable:** The variable `age` has been extracted into the `doStuff` method.
+
+### Refactoring 7:
+- **Original Section:**
+    ```java
+    public void barkBark(DogManager manager) {
+        System.out.println("ruff");
+        System.out.println("ruff");
+        takeABreath();
+        System.out.println("ruff");
+        System.out.println("ruff");
+        System.out.println("ruff");
+    }
+    ```
+- **Refactored Section:**
+    ```java
+    public void barkBark(Dog dog) {
+        System.out.println("ruff");
+        System.out.println("ruff");
+        dog.takeABreath();
+        System.out.println("ruff");
+        System.out.println("ruff");
+        System.out.println("ruff");
+    }
+    ```
+- **Refactoring Type:**
+    - **Inline Variable:** The variable `age` has been inlined into the `doStuff` method.
+
+### Refactoring 8:
+- **Original Section:**
+    ```java
+    public void barkBark(DogManager manager) {
+        System.out.println("ruff");
+        System.out.println("ruff");
+        takeABreath();
+        System.out.println("ruff");
+        System.out.println("ruff");
+        System.out.println("ruff");
+    }
+    ```
+- **Refactored Section:**
+    ```java
+    public void barkBark(Dog dog) {
+        System.out.println("ruff");
+        System.out.println("ruff");
+        dog.takeABreath();
+        System.out.println("ruff");
+        System.out.println("ruff");
+        System.out.println("ruff");
+    }
+    ```
+- **Refactoring Type:**
+    - **Rename Variable:** The variable `manager` has been renamed to `dog`.
+
+### Refactoring 9:
+- **Original Section:**
+    ```java
+    public void barkBark(DogManager manager) {
+        System.out.println("ruff");
+        System.out.println("ruff");
+        takeABreath();
+        System.out.println("ruff");
+        System.out.println("ruff");
+        System.out.println("ruff");
+    }
+    ```
+- **Refactored Section:**
+    ```java
+    public void barkBark(Dog dog) {
+        System.out.println("ruff");
+        System.out.println("ruff");
+        dog.takeABreath();
+        System.out.println("ruff");
+        System.out.println("ruff");
+        System.out.println("ruff");
+    }
+    ```
+- **Refactoring Type:**
+    - **Extract Variable:** The variable `age` has been extracted into the `doStuff` method.
+
+### Refactoring 10:
+- **Original Section:**
+    ```java
+    public void barkBark(DogManager manager) {
+        System.out.println("ruff");
+        System.out.println("ruff");
+        takeABreath();
+        System.out.println("ruff");
+        System.out.println("ruff");
+        System.out.println("ruff");
+    }
+    ```
+- **Refactored Section:**
+    ```java
+    public void barkBark(Dog dog) {
+        System.out.println("ruff");
+        System.out.println("ruff");
+        dog.takeABreath();
+        System.out.println("ruff");
+        System.out.println("ruff");
+        System.out.println("ruff");
+    }
+    ```
+- **Refactoring Type:**
+    - **Inline Variable:** The variable `age` has been inlined into the `doStuff` method.

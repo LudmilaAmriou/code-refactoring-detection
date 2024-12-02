@@ -1,0 +1,24 @@
+- **Original Section:** 
+  ```java
+  public class Chicken {
+      public void cackle() {
+          System.out.println("cackle");
+      }
+      
+      public void layEgg() {
+          
+      }
+  }
+  ```
+  
+- **Refactored Section:** 
+  ```java
+  public class Bird {
+      public void layEgg() {
+          
+      }
+  }
+  ```
+
+- **Refactoring Type:** 
+  - **Move**: The `Chicken` class has been renamed to `Bird`.

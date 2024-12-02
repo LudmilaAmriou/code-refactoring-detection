@@ -1,0 +1,24 @@
+- **Original Section:** 
+  ```java
+  void action();
+  ```
+  
+- **Refactored Section:** 
+  ```java
+  // No changes to this section
+  ```
+
+- **Refactoring Type:** None
+
+- **Original Section:** 
+  ```java
+  public interface Animal {
+  ```
+  
+- **Refactored Section:** 
+  ```java
+  public interface Animal extends AnimalSuper {
+  ```
+  
+- **Refactoring Type:** Interface Extension
+  - The `Animal` interface now extends another interface named `AnimalSuper`. This is a refactoring that adds an inheritance relationship to the interface, potentially introducing new methods or behaviors from the superclass.

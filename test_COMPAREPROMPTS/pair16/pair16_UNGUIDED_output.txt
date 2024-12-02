@@ -1,0 +1,80 @@
+### Refactoring Detected:
+
+1. **Refactoring Type:** Class Renaming  
+   - **Original Section:**
+     ```java
+     package org.reptile;
+
+     public class AnimalMarilho {
+     ```
+   - **Refactored Section:**
+     ```java
+     package org.reptile;
+
+     public class Reptile extends AnimalMarilho {
+     ```
+   - **Description:** The class `AnimalMarilho` has been renamed to `Reptile`. This is a significant refactoring as it changes the name of the class, which can affect its usage and understanding in other parts of the codebase.
+
+2. **Refactoring Type:** Inheritance Addition  
+   - **Original Section:**
+     ```java
+     public class AnimalMarilho {
+     ```
+   - **Refactored Section:**
+     ```java
+     public class Reptile extends AnimalMarilho {
+     ```
+   - **Description:** The `Reptile` class now inherits from `AnimalMarilho`. This indicates that the `Reptile` class is intended to extend or specialize the functionality of `AnimalMarilho`, which could involve overriding methods, adding new properties, or both.
+
+3. **Refactoring Type:** Method Overriding  
+   - **Original Section:**
+     ```java
+     @Override
+     public boolean equals(Object obj) {
+         if (this == obj)
+             return true;
+         if (obj == null)
+             return false;
+         if (getClass() != obj.getClass())
+             return false;
+         TurtleMarinha other = (TurtleMarinha) obj;
+         if (action == null) {
+             if (other.action != null)
+                 return false;
+         } else if (!action.equals(other.action))
+             return false;
+         if (age != other.age)
+             return false;
+         if (name != other.name)
+             return false;
+         if (spead != other.spead)
+             return false;
+         return true;
+     }
+     ```
+   - **Refactored Section:**
+     ```java
+     @Override
+     public boolean equals(Object obj) {
+         if (this == obj)
+             return true;
+         if (obj == null)
+             return false;
+         if (getClass() != obj.getClass())
+             return false;
+         TurtleMarinha other = (TurtleMarinha) obj;
+         if (action == null) {
+             if (other.action != null)
+                 return false;
+         } else if (!action.equals(other.action))
+             return false;
+         if (age != other.age)
+             return false;
+         if (name != other.name)
+             return false;
+         if (spead != other.spead)
+             return false;
+         return true;
+     }
+     ```
+   - **Description:** The `equals` method in the refactored code is identical to the original. However, since the class has changed from `AnimalMarilho` to `Reptile`, and assuming that `TurtleMarinha` is a subclass of `Reptile`, this might indicate an oversight or error in the provided refactored code. The method should ideally be overridden to ensure correct behavior for instances of `Reptile`.

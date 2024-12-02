@@ -1,0 +1,5 @@
+There is no refactoring.
+
+The provided code snippets are identical, with only a minor difference in the class name from `Turtle` to `TurtleMarinha`. This change does not constitute a refactoring according to the guidelines provided. Refactoring involves changes that improve the structure or design of the code without changing its external behavior, such as moving methods between classes, changing method signatures, adding new methods, modifying access levels, encapsulating fields, etc.
+
+In this case, the only difference is a change in the class name, which does not affect the internal implementation or functionality of the class. Therefore, no refactoring has occurred.

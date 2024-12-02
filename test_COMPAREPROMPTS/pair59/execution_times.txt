@@ -1,0 +1,3 @@
+BONUS: 230.02 seconds
+UNGUIDED: 366.28 seconds
+GUIDED: 173.10 seconds

@@ -1,0 +1,3 @@
+- **Original Section:** `public interface Animal { void action(); }`
+- **Refactored Section:** `public interface AnimalSuper { void action(); }`
+- **Refactoring Type:** Renaming of the interface from `Animal` to `AnimalSuper`. This is a simple renaming refactor that does not change the functionality or structure of the code, but rather its identifier.

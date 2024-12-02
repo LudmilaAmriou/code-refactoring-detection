@@ -1,0 +1,12 @@
+- **Original Section:** 
+  ```java
+  System.out.println("...");
+  ```
+  
+- **Refactored Section:** 
+  ```java
+  takeABreath();
+  ```
+
+- **Refactoring Type:** 
+  The original code directly prints "..." in the `bark` method. In the refactored code, this line has been moved to a new method called `takeABreath`, which is then called from within the `bark` method. This is an example of **Extract Method** (also known as Extract Function), where a piece of code that performs a specific task is extracted into its own method for better readability and reusability.

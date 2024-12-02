@@ -1,0 +1,3 @@
+There is no refactoring.
+
+The provided code snippets show a class `AnimalMarilho` and its subclass `Reptile`. The `Reptile` class extends `AnimalMarilho`, but there are no changes in the methods, fields, or logic between the two classes. The only difference is that the `Reptile` class overrides the `hashCode()` method from the superclass `AnimalMarilho`. However, this does not constitute a refactoring as it is simply an addition of a new method to the subclass.

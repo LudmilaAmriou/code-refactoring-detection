@@ -1,0 +1,3 @@
+There is no refactoring.
+
+The provided code snippets show a class `Reptile` and its subclass `TurtleMarinha`. The `TurtleMarinha` class extends `Reptile` and includes constructors with varying parameters, but there are no changes in method signatures, access levels, or logic compared to the original `Reptile` class. The methods for getting and setting attributes (`getAge`, `setAge`, etc.) remain unchanged. Therefore, no refactorings have occurred between these two classes.

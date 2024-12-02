@@ -1,0 +1,11 @@
+- **Original Section:** 
+  ```java
+  public class Cow {
+  ```
+  
+- **Refactored Section:** 
+  ```java
+  public class CowRenamed {
+  ```
+  
+- **Refactoring Type:** Rename Class

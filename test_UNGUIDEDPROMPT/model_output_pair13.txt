@@ -1,0 +1,9 @@
+There is no refactoring.
+
+The provided code snippets show a class `Reptile` and its subclass `TurtleMarinha`. The `TurtleMarinha` class extends `Reptile` and includes additional constructors for different levels of initialization. However, the methods `equals`, `hashCode`, and other properties (like `action`, `age`, `name`, `spead`) remain unchanged from the original `Reptile` class.
+
+The differences are:
+1. The addition of multiple constructors in the `TurtleMarinha` class.
+2. The removal of the `AnimalMarilho` superclass reference in the `TurtleMarinha` class declaration, as it is not used and can be omitted.
+
+These changes do not constitute a refactoring but rather an extension of the class with additional constructors.

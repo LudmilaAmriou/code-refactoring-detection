@@ -1,0 +1,3 @@
+There is no refactoring.
+
+The provided code snippets show two classes, `Turtle` and `Reptile`, which appear to be identical except for their names. The class `Reptile` has the same fields, methods, and logic as `Turtle`. There are no changes in method signatures, access levels, or any other refactoring types listed in the guidelines. Therefore, there is no refactoring detected between these two classes.

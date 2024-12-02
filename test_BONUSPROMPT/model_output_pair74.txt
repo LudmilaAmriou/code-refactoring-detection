@@ -1,0 +1,18 @@
+### Refactoring Detected:
+
+1. **Refactoring Type:** Add Method  
+   - **Original Section:**
+     ```java
+     // No additional methods were present in the original code.
+     ```
+   - **Refactored Section:**
+     ```java
+     public void meow() {
+         System.out.println("meow");
+     }
+     ```
+   - **Description:** A new method `meow()` was added to the class. This method prints "meow" when called, which could represent a behavior specific to felines or tigers.
+
+### Summary:
+- The original code did not contain any methods other than getters and setters.
+- In the refactored code, a new method `meow()` has been added to the `Feline` class. This method does not change the existing attributes but introduces a new behavior associated with felines or tigers.

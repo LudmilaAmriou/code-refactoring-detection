@@ -1,0 +1,26 @@
+- **Original Section:** 
+  ```java
+  public void barkBark() {
+      System.out.println("ruff");
+      System.out.println("ruff");
+      takeABreath();
+      System.out.println("ruff");
+      System.out.println("ruff");
+      System.out.println("ruff");
+  }
+  ```
+  
+- **Refactored Section:** 
+  ```java
+  public void barkBark(DogManager manager) {
+      System.out.println("ruff");
+      System.out.println("ruff");
+      takeABreath();
+      System.out.println("ruff");
+      System.out.println("ruff");
+      System.out.println("ruff");
+  }
+  ```
+  
+- **Refactoring Type:** 
+  - **Parameterize:** The method `barkBark` has been parameterized by adding a new parameter `DogManager manager`.

@@ -1,0 +1,3 @@
+There is no refactoring.
+
+The provided code snippets show a class `AnimalMarilho` and its subclass `Reptile`. The `Reptile` class extends `AnimalMarilho`, but there are no changes in the methods or logic compared to the original `AnimalMarilho` class. Specifically, the `equals` method is overridden in both classes, but it remains identical. There are no new methods added, existing methods modified, or any other refactoring applied.

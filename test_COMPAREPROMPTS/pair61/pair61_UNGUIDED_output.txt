@@ -1,0 +1,72 @@
+### Refactoring Detected:
+
+1. **Refactoring Type:** Class Inheritance
+   - **Original Section:**
+     ```java
+     public class Feline implements Animal {
+     ```
+   - **Refactored Section:**
+     ```java
+     public class Tiger extends Feline implements Animal {
+     ```
+   - **Description:** The `Feline` class has been refactored into a subclass named `Tiger`. This change indicates that the `Tiger` class now inherits from the `Feline` class, potentially adding specific behaviors or properties unique to tigers.
+
+2. **Refactoring Type:** Removal of Unused Fields
+   - **Original Section:**
+     ```java
+     private int age;
+     private int name;
+     ```
+   - **Refactored Section:**
+     (No corresponding section in the refactored code)
+   - **Description:** The fields `age` and `name` have been removed from the `Tiger` class. This suggests that these properties are either not relevant to tigers or have been moved to a more appropriate superclass.
+
+3. **Refactoring Type:** Removal of Unused Methods
+   - **Original Section:**
+     ```java
+     public int getAge() {
+         return age;
+     }
+     public void setAge(int age) {
+         this.age = age;
+     }
+     public int getName() {
+         return name;
+     }
+     public void setName(int name) {
+         this.name = name;
+     }
+     ```
+   - **Refactored Section:**
+     (No corresponding section in the refactored code)
+   - **Description:** The getter and setter methods for `age` and `name` have been removed from the `Tiger` class. This indicates that these properties are no longer being managed or accessed through these methods.
+
+4. **Refactoring Type:** Method Overriding
+   - **Original Section:**
+     ```java
+     @Override
+     public void action() {
+         // TODO Auto-generated method stub
+     }
+     ```
+   - **Refactored Section:**
+     (No corresponding section in the refactored code)
+   - **Description:** The `action` method, which is overridden from the `Animal` interface, has been removed from the `Tiger` class. This suggests that the specific behavior for tigers related to this method might have been moved elsewhere or is no longer relevant.
+
+5. **Refactoring Type:** Method Signature Change
+   - **Original Section:**
+     ```java
+     public void meow() {
+         System.out.println("meow");
+     }
+     ```
+   - **Refactored Section:**
+     (No corresponding section in the refactored code)
+   - **Description:** The `meow` method has been removed from the `Tiger` class. This indicates that the specific behavior for tigers related to this method might have been moved elsewhere or is no longer relevant.
+
+### Summary:
+- The `Feline` class has been refactored into a subclass named `Tiger`.
+- The properties `age` and `name` have been removed from the `Tiger` class.
+- The methods for accessing and modifying `age` and `name` have been removed.
+- The `action` method, which is overridden from the `Animal` interface, has been removed.
+- The `meow` method has been removed.

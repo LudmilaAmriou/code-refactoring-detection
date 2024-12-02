@@ -1,0 +1,30 @@
+- **Original Section:** 
+  ```java
+  public void bark() {
+      System.out.println("ruff");
+      System.out.println("ruff");
+      System.out.println("...");
+      System.out.println("ruff");
+      System.out.println("ruff");
+      System.out.println("ruff");
+  }
+  ```
+  
+- **Refactored Section:** 
+  ```java
+  public void bark() {
+      System.out.println("ruff");
+      System.out.println("ruff");
+      takeABreath();
+      System.out.println("ruff");
+      System.out.println("ruff");
+      System.out.println("ruff");
+  }
+  
+  public void takeABreath() {
+      System.out.println("...");
+  }
+  ```
+  
+- **Refactoring Type:** 
+  - **Extract Method:** The `System.out.println("...");` statement was extracted into a new method named `takeABreath()`. This refactoring improves the readability and reusability of the code by breaking down the `bark()` method into smaller, more manageable parts.

@@ -1,0 +1,34 @@
+- **Original Section:** 
+  ```java
+  public class Labrador extends Dog {
+      private int age = 0;
+
+      public int getAge() {
+          return this.age;
+      }
+  }
+  ```
+  
+- **Refactored Section:**
+  ```java
+  public class Dog {
+
+      private int age = 0;
+
+      public int getAge() {
+          return this.age;
+      }
+
+      public void bark() {
+          System.out.println("ruff");
+          System.out.println("ruff");
+          System.out.println("...");
+          System.out.println("ruff");
+          System.out.println("ruff");
+          System.out.println("ruff");
+      }
+  }
+  ```
+  
+- **Refactoring Type:** 
+  - **Move Method:** The `bark` method was moved from the `Labrador` class to the `Dog` class. This is a refactoring of the `Methods` category, specifically the "Move" type.

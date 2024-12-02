@@ -1,0 +1,47 @@
+- **Original Section:** 
+  ```java
+  int s1 = 1;
+  int s2 = 2;
+  int s3 = 3;
+  int s4 = 4;
+  int s5 = 5;
+  int s6 = 6;
+  int s7 = 7;
+  int s8 = 8;
+  ```
+
+- **Refactored Section:** 
+  ```java
+  int s1 = 1;
+  int s2 = 2;
+  sleepNight();
+  int s8 = 8;
+  ```
+
+- **Refactoring Type:** 
+  - **Method Extraction:** The original code had multiple integer variables initialized sequentially. In the refactored code, these variables are moved into a new private method `sleepNight()`, which encapsulates the initialization of these variables.
+
+---
+
+- **Original Section:** 
+  ```java
+  int s3 = 3;
+  int s4 = 4;
+  int s5 = 5;
+  int s6 = 6;
+  int s7 = 7;
+  ```
+
+- **Refactored Section:** 
+  ```java
+  private void sleepNight() {
+      int s3 = 3;
+      int s4 = 4;
+      int s5 = 5;
+      int s6 = 6;
+      int s7 = 7;
+  }
+  ```
+
+- **Refactoring Type:** 
+  - **Method Extraction:** The initialization of the variables `s3`, `s4`, `s5`, `s6`, and `s7` is moved into a new private method `sleepNight()`. This refactoring improves code organization and reusability.

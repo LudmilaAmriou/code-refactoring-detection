@@ -1,0 +1,12 @@
+There is no refactoring.
+
+The original and refactored code are identical. Both classes (`Reptile` and `AnimalMarilho`) have the same structure, including:
+
+- The same package declaration: `package org.reptile;`
+- The same class declarations: `public class Reptile extends AnimalMarilho` and `public class AnimalMarilho`
+- The same fields: `protected int age`, `protected int name`, `protected int spead`, `protected String action`
+- The same constructors: `public Reptile()` and `public AnimalMarilho()`
+- The same getter and setter methods for each field
+- The same `hashCode` and `equals` methods
+
+Since there are no changes in the structure, method signatures, access levels, or any other elements between the original and refactored code, it can be concluded that there is no refactoring.

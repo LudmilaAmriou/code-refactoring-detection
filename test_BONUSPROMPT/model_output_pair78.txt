@@ -1,0 +1,23 @@
+In this case, there is no actual refactoring performed on the provided code. The Original Code and Refactored Code are identical:
+
+Original Code:
+```java
+package org.animals;
+
+import org.felines.Feline;
+
+public class Tiger extends Feline{
+
+}
+```
+
+Refactored Code:
+```java
+package org.felines;
+
+public class Tiger extends Feline{
+
+}
+```
+
+Since the code remains unchanged, no refactorings have been applied.

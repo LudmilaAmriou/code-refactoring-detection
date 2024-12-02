@@ -1,0 +1,35 @@
+# Ignore Maven build directory
+target/
+
+# Ignore Gradle build directory
+build/
+
+# Ignore IntelliJ IDEA files
+.idea/
+*.iml
+out/
+
+# Ignore compiled Java class files
+*.class
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore temporary files
+*.log
+*.tmp
+*.swp
+
+# Ignore dependency manager files
+.mvn/
+.gradle/
+
+# Ignore Eclipse-specific files
+.project
+.classpath
+.settings/
+
+# Ignore NetBeans-specific files
+nbproject/
+results/

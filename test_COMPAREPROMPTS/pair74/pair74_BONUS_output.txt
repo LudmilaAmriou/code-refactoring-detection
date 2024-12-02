@@ -1,0 +1,50 @@
+- **Original Section:** 
+  ```java
+  public class Tiger extends Feline{
+  	private int age;
+  	private int name;
+  	
+  	public int getAge() {
+  		return age;
+  	}
+  	public void setAge(int age) {
+  		this.age = age;
+  	}
+  	public int getName() {
+  		return name;
+  	}
+  	public void setName(int name) {
+  		this.name = name;
+  	}
+  }
+  ```
+  
+- **Refactored Section:** 
+  ```java
+  public class Feline {
+
+  	private int age;
+  	private int name;
+  	
+  	public int getAge() {
+  		return age;
+  	}
+  	public void setAge(int age) {
+  		this.age = age;
+  	}
+  	public int getName() {
+  		return name;
+  	}
+  	public void setName(int name) {
+  		this.name = name;
+  	}
+  	
+  	public void meow() {
+  		System.out.println("meow");
+  	}
+
+  }
+  ```
+  
+- **Refactoring Type:** 
+  - **Add Method**: A new method `meow()` has been added to the `Feline` class. This is a refactoring of type "Add Method".

@@ -1,0 +1,3 @@
+There is no refactoring.
+
+The original and refactored code are identical. The only difference is that the class name has been changed from `Turtle` to `Reptile`, but this does not constitute a refactoring in terms of code structure or functionality. Refactoring typically involves changes to improve the design, readability, or maintainability of the code without altering its external behavior.

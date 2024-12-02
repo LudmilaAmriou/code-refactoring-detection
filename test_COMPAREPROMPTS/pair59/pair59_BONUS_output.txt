@@ -1,0 +1,30 @@
+### Refactoring Detected:
+
+1. **Refactoring Type:** Move Class
+   - **Original Section:**
+     ```java
+     package org.reptile;
+
+     public class Turtle {
+         private int age;
+         private int name;
+         private int spead;
+         private String action;
+
+         // Constructors, getters, setters, toString, hashCode, equals methods
+     }
+     ```
+   - **Refactored Section:**
+     ```java
+     package org.reptile;
+
+     public class Turtle extends Reptile {
+         // Constructors, getters, setters, toString, hashCode, equals methods
+     }
+     ```
+   - **Description:** The `Turtle` class has been moved to extend the `Reptile` class. This is a clear example of moving a class to inherit from another class, which can be seen as a form of refactoring.
+
+### Summary:
+- **Refactoring Type:** Move Class
+  - **Original Section:** The original code defines a standalone `Turtle` class.
+  - **Refactored Section:** The `Turtle` class now extends the `Reptile` class, indicating that it has been moved to inherit from another class.

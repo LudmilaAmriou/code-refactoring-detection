@@ -1,0 +1,27 @@
+- **Original Section:** 
+  ```java
+  package org.felines;
+  
+  public class Cat {
+  
+  	public void meow() {
+  		System.out.println("meow");
+  	}
+  
+  }
+  ```
+  
+- **Refactored Section:** 
+  ```java
+  package org.felines;
+  
+  public class Feline {
+  
+  	public void meow() {
+  		System.out.println("meow");
+  	}
+  
+  }
+  ```
+
+- **Refactoring Type:** Rename Class. The class `Cat` has been renamed to `Feline`.

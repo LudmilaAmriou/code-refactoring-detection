@@ -1,0 +1,8 @@
+There is no refactoring.
+
+The only difference between the original code and the refactored code is the package declaration:
+
+- Original Section: `package org.animals;`
+- Refactored Section: `package org.birds;`
+
+This change in the package name does not constitute a refactoring according to the provided guidelines. A refactoring typically involves changes that improve the structure, readability, or maintainability of the code without changing its external behavior. Simply changing the package name is more of a reorganization than a refactoring.

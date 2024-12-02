@@ -1,0 +1,118 @@
+### Refactoring 1:
+**Original Section:**
+```java
+public class Dog {
+    // Class body
+}
+```
+
+**Refactored Section:**
+```java
+package org;
+import org.animals.Dog;
+
+public class DogManager {
+    private Dog dog;
+    public DogManager(Dog aDog) {
+        this.dog = aDog;
+    }
+    
+    // Class body
+}
+```
+
+**Refactoring Type:** Moved Method  
+**Description:** The `Dog` class has been moved to the `org.animals` package, and its methods have been moved to the `DogManager` class.
+
+### Refactoring 2:
+**Original Section:**
+```java
+public void barkBark(DogManager manager) {
+    System.out.println("ruff");
+    System.out.println("ruff");
+    takeABreath();
+    System.out.println("ruff");
+    System.out.println("ruff");
+    System.out.println("ruff");
+}
+```
+
+**Refactored Section:**
+```java
+public void barkBark(Dog dog) {
+    System.out.println("ruff");
+    System.out.println("ruff");
+    dog.takeABreath();
+    System.out.println("ruff");
+    System.out.println("ruff");
+    System.out.println("ruff");
+}
+```
+
+**Refactoring Type:** Changed Parameter  
+**Description:** The method `barkBark` in the `DogManager` class now takes a `Dog` object as a parameter instead of a `DogManager` object.
+
+### Refactoring 3:
+**Original Section:**
+```java
+public void takeABreath() {
+    System.out.println("...");
+}
+```
+
+**Refactored Section:**
+```java
+dog.takeABreath();
+```
+
+**Refactoring Type:** Removed Method Call  
+**Description:** The method call `takeABreath()` has been removed from the `barkBark` method in the `DogManager` class.
+
+### Refactoring 4:
+**Original Section:**
+```java
+public int getAge() {
+    return this.age;
+}
+```
+
+**Refactored Section:**
+```java
+int age = dog.getAge();
+```
+
+**Refactoring Type:** Added Method Call  
+**Description:** A new method call `dog.getAge()` has been added to the `doStuff` method in the `DogManager` class.
+
+### Refactoring 5:
+**Original Section:**
+```java
+public int magicNumber = 17;
+```
+
+**Refactored Section:**
+```java
+int sum = 0;
+for (int i = 0; i < age; i++) {
+    System.out.println(i);
+    sum += i;
+}
+sum -= dog.magicNumber;
+```
+
+**Refactoring Type:** Added Logic  
+**Description:** A new logic block has been added to the `doStuff` method in the `DogManager` class, which calculates a sum based on the dog's age and subtracts the `magicNumber`.
+
+### Refactoring 6:
+**Original Section:**
+```java
+private int age = 0;
+```
+
+**Refactored Section:**
+```java
+int age = dog.getAge();
+```
+
+**Refactoring Type:** Changed Access Level  
+**Description:** The field `age` in the `DogManager` class is now a local variable instead of an instance variable, and its access level has changed from private to public.

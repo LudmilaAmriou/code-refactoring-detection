@@ -1,0 +1,69 @@
+### Refactoring Detected:
+
+1. **Refactoring Type:** Class Inheritance
+   - **Original Section:**
+     ```java
+     public class Feline implements Animal {
+     ```
+   - **Refactored Section:**
+     ```java
+     public class Tiger extends Feline implements Animal {
+     ```
+   - **Description:** The `Feline` class has been refactored into a subclass named `Tiger`. This introduces inheritance, making `Tiger` a specialized version of `Feline`.
+
+2. **Refactoring Type:** Removal of Unused Fields and Methods
+   - **Original Section:**
+     ```java
+     private int age;
+     private int name;
+     
+     public int getAge() {
+         return age;
+     }
+     public void setAge(int age) {
+         this.age = age;
+     }
+     public int getName() {
+         return name;
+     }
+     public void setName(int name) {
+         this.name = name;
+     }
+     
+     public void meow() {
+         System.out.println("meow");
+     }
+     
+     @Override
+     public void action() {
+         // TODO Auto-generated method stub
+     }
+     ```
+   - **Refactored Section:**
+     ```java
+     private int speed;
+     
+     public int getSpeed() {
+         return speed;
+     }
+     public void setSpeed(int speed) {
+         this.speed = speed;
+     }
+     ```
+   - **Description:** The fields `age` and `name`, along with their corresponding getter and setter methods, have been removed. Only the `speed` field and its associated methods remain.
+
+3. **Refactoring Type:** Method Override
+   - **Original Section:**
+     ```java
+     @Override
+     public void action() {
+         // TODO Auto-generated method stub
+     }
+     ```
+   - **Refactored Section:** (No change)
+   - **Description:** The `action` method is still present in the refactored code, but it remains empty as indicated by the comment. This suggests that the method was either intended to be overridden or left intentionally blank.
+
+### Summary:
+- **Class Inheritance:** Introduced a subclass `Tiger` inheriting from `Feline`.
+- **Field and Method Removal:** Removed unused fields (`age`, `name`) and their associated methods.
+- **Method Override:** The `action` method remains unchanged but is still present.

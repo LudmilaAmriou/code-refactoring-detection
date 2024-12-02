@@ -1,0 +1,3 @@
+There is no refactoring.
+
+The provided code snippets for both the original and refactored classes are identical. There are no changes in method signatures, access levels, or any other elements that would classify this as a refactoring. The only difference is the class name from `Turtle` to `TurtleMarinha`, but this does not constitute a refactoring according to the guidelines provided.

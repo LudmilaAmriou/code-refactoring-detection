@@ -1,0 +1,3 @@
+There is no refactoring.
+
+The original code and the refactored code do not show any changes that would be classified as a refactoring according to the provided guidelines. The only difference between the two versions is the class name, which has changed from `Duck` to `Bird`. However, this change does not constitute a refactoring; it is simply a renaming of the class.

@@ -1,0 +1,27 @@
+### Refactoring Detected
+
+1. **Class Name Change**
+   - **Original Section:** `public class AnimalMarilho {`
+   - **Refactored Section:** `public class Reptile extends AnimalMarilho {`
+   - **Refactoring Type:** The class name has been changed from `AnimalMarilho` to `Reptile`, and it now extends the `AnimalMarilho` class.
+
+2. **Method Name Change**
+   - **Original Section:** `@Override public int hashCode() {`
+   - **Refactored Section:** `@Override public boolean equals(Object obj) {`
+   - **Refactoring Type:** The method name has been changed from `hashCode()` to `equals(Object obj)`.
+
+3. **Parameter in Method**
+   - **Original Section:** None (no parameters)
+   - **Refactored Section:** `(Object obj)`
+   - **Refactoring Type:** A parameter of type `Object` named `obj` has been added to the `equals` method.
+
+4. **Comparison Logic Change**
+   - **Original Section:** None (no comparison logic)
+   - **Refactored Section:** 
+     ```java
+     if (this == obj) return true;
+     if (obj == null) return false;
+     if (getClass() != obj.getClass()) return false;
+     TurtleMarinha other = (TurtleMarinha) obj;
+     ```
+   - **Refactoring Type:** The method now includes comparison logic to check if the objects are equal, including checks for `null`, class type, and field values.

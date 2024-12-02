@@ -1,0 +1,13 @@
+- **Original Section:** 
+  ```java
+  if (getClass() != obj.getClass())
+      return false;
+  ```
+
+- **Refactored Section:** 
+  ```java
+  if (getClass() != obj.getClass())
+      return false;
+  ```
+
+- **Refactoring Type:** No change. The class name `Turtle` remains unchanged in both the original and refactored code.

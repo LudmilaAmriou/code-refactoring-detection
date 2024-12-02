@@ -1,0 +1,26 @@
+- **Original Section:** 
+  ```java
+  package org.felines;
+
+  public class Cat extends Feline {
+      public void meow() {
+          System.out.println("meow");
+      }
+  }
+  ```
+
+- **Refactored Section:** 
+  ```java
+  package org.felines;
+
+  public class Feline {
+
+      public void meow() {
+          System.out.println("meow");
+      }
+
+  }
+  ```
+
+- **Refactoring Type:** 
+  - **Move**: The `Cat` class has been moved to the `Feline` class.

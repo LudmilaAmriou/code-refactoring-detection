@@ -1,0 +1,1 @@
+There is no refactoring between the original code and the refactored code provided. The classes `Reptile` and `AnimalMarilho` are identical in both versions, with no changes to their structure, methods, or logic. Therefore, there are no refactorings to report.

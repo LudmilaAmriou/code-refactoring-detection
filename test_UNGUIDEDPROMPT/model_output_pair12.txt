@@ -1,0 +1,78 @@
+### Refactoring Detected:
+
+1. **Class Inheritance and Method Override**:
+   - **Original Section**: 
+     ```java
+     public class AnimalMarilho {
+         // Class body
+     }
+     ```
+   - **Refactored Section**: 
+     ```java
+     public class Reptile extends AnimalMarilho {
+         // Class body
+     }
+     ```
+   - **Refactoring Type**: The `AnimalMarilho` class has been refactored into a subclass named `Reptile`. This introduces inheritance, allowing the `Reptile` class to inherit properties and methods from `AnimalMarilho`.
+
+2. **Method Override**:
+   - **Original Section**: 
+     ```java
+     // No method override in the original code
+     ```
+   - **Refactored Section**: 
+     ```java
+     @Override
+     public int hashCode() {
+         final int prime = 31;
+         int result = 1;
+         result = prime * result + ((action == null) ? 0 : action.hashCode());
+         result = prime * result + age;
+         result = prime * result + name;
+         result = prime * result + spead;
+         return result;
+     }
+     ```
+   - **Refactoring Type**: The `hashCode` method has been added to the `Reptile` class. This is an override of a method from the superclass `AnimalMarilho`, likely to provide a custom hash code implementation that considers all relevant fields.
+
+3. **Field Removal**:
+   - **Original Section**: 
+     ```java
+     protected int spead;
+     ```
+   - **Refactored Section**: 
+     ```java
+     // Field removed in the refactored code
+     ```
+   - **Refactoring Type**: The `spead` field has been removed from the `Reptile` class. This indicates that the speed attribute is no longer relevant or necessary for the `Reptile` class, possibly due to a change in requirements or design.
+
+4. **Method Signature Change**:
+   - **Original Section**: 
+     ```java
+     public String getAction() {
+         return action;
+     }
+     ```
+   - **Refactored Section**: 
+     ```java
+     // Method signature remains the same
+     ```
+   - **Refactoring Type**: No change in method signature. The `getAction` method still returns a `String`.
+
+5. **Method Signature Change**:
+   - **Original Section**: 
+     ```java
+     public void setSpead(int spead) {
+         this.spead = spead;
+     }
+     ```
+   - **Refactored Section**: 
+     ```java
+     // Method signature remains the same
+     ```
+   - **Refactoring Type**: No change in method signature. The `setSpead` method still takes an `int` parameter and sets it to the instance variable.
+
+### Summary:
+- **Inheritance**: Introduced a subclass `Reptile` that extends `AnimalMarilho`.
+- **Method Override**: Added and overrode the `hashCode` method.
+- **Field Removal**: Removed the `spead` field from the `Reptile` class.

@@ -1,0 +1,12 @@
+- **Original Section:** 
+  ```java
+  package org.felines;
+  ```
+
+- **Refactored Section:** 
+  ```java
+  package org.birds;
+  ```
+
+- **Refactoring Type:** 
+  - **Package Rename**: The package name has been changed from `org.felines` to `org.birds`.

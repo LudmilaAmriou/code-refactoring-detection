@@ -1,0 +1,20 @@
+- **Original Section:** 
+  ```java
+  public class Cat extends Feline {
+      public void meow() {
+          System.out.println("meow");
+      }
+  }
+  ```
+  
+- **Refactored Section:** 
+  ```java
+  public class Feline {
+      public void meow() {
+          System.out.println("meow");
+      }
+  }
+  ```
+
+- **Refactoring Type:** 
+  The `Cat` class has been renamed to `Feline`. This is a significant refactoring as it changes the name of the class, which can affect how other parts of the codebase interact with this class.

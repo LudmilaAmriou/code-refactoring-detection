@@ -1,0 +1,25 @@
+- **Original Section:** 
+  ```java
+  public class Reptile {
+      protected int age;
+      protected int name;
+      protected int spead;
+      protected String action;
+
+      // Getters and setters for age, name, spead, and action
+  }
+  ```
+  
+- **Refactored Section:**
+  ```java
+  public class Reptile {
+      protected int age;
+      protected int name;
+      protected int spead;
+      protected String action;
+
+      // Getters and setters for age, name, spead, and action
+  }
+  ```
+
+**Refactoring Type:** No refactorings detected. The code remains unchanged.

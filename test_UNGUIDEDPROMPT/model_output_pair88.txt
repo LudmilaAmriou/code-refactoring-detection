@@ -1,0 +1,11 @@
+- **Original Section:** 
+  ```java
+  public class Chicken {
+  ```
+  
+  - **Refactored Section:**
+    ```java
+    public class Chicken extends Bird {
+    ```
+    
+    - **Refactoring Type:** The `Chicken` class now extends the `Bird` class, indicating that it is a subclass of `Bird`. This change suggests that `Chicken` inherits properties and methods from `Bird`, potentially adding more functionality or overriding existing ones.

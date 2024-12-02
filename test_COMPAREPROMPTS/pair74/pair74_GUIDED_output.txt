@@ -1,0 +1,5 @@
+There is no refactoring.
+
+The provided code snippets show two classes: `Tiger` and `Feline`. The `Tiger` class extends the `Feline` class, and both classes contain similar fields (`age` and `name`) with corresponding getter and setter methods. Additionally, the `Feline` class now includes a new method `meow()`.
+
+Therefore, no refactorings have been detected between the original and refactored code.

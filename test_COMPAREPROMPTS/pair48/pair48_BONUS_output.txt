@@ -1,0 +1,33 @@
+### Refactoring Detected:
+
+1. **Class Renaming**
+   - **Original Section:** 
+     ```java
+     package org.reptile;
+
+     public class Turtle {
+     ```
+   - **Refactored Section:**
+     ```java
+     package org.reptile;
+
+     public class Reptile {
+     ```
+   - **Refactoring Type:** The class `Turtle` has been renamed to `Reptile`.
+
+2. **Modifier Change**
+   - **Original Section:**
+     ```java
+     private int age;
+     private int name;
+     private int spead;
+     private String action;
+     ```
+   - **Refactored Section:**
+     ```java
+     protected int age;
+     protected int name;
+     protected int spead;
+     protected String action;
+     ```
+   - **Refactoring Type:** The access modifiers for the attributes `age`, `name`, `spead`, and `action` have been changed from `private` to `protected`.

@@ -1,0 +1,109 @@
+### Refactoring 1:
+**Original Section:**
+```java
+public class Dog {
+    private int age = 0;
+    public int magicNumber = 17;
+
+    public int getAge() {
+        return this.age;
+    }
+
+    public void barkBark(DogManager manager) {
+        System.out.println("ruff");
+        System.out.println("ruff");
+        takeABreath();
+        System.out.println("ruff");
+        System.out.println("ruff");
+        System.out.println("ruff");
+    }
+
+    public void takeABreath() {
+        System.out.println("...");
+    }
+}
+```
+
+**Refactored Section:**
+```java
+public class DogManager {
+
+    private Dog dog;
+    public DogManager(Dog aDog) {
+        this.dog = aDog;
+    }
+    
+    public void doStuff() {
+        barkBark(this.dog);
+        
+        int age = dog.getAge();
+        int sum = 0;
+        for (int i = 0; i < age; i++) {
+            System.out.println(i);
+            sum += i;
+        }
+        sum -= dog.magicNumber;
+        dog.takeABreath();
+    }
+
+    public void barkBark(Dog dog) {
+        System.out.println("ruff");
+        System.out.println("ruff");
+        dog.takeABreath();
+        System.out.println("ruff");
+        System.out.println("ruff");
+        System.out.println("ruff");
+    }
+}
+```
+
+**Refactoring Type:** 
+- **Class Renaming**: The `Dog` class has been renamed to `DogManager`.
+- **Method Extraction**: The `barkBark` method from the `Dog` class has been moved to the `DogManager` class.
+- **Constructor Addition**: A constructor that takes a `Dog` object as a parameter has been added to the `DogManager` class.
+- **New Method Creation**: A new method `doStuff` has been created in the `DogManager` class.
+
+### Refactoring 2:
+**Original Section:**
+```java
+public void barkBark(DogManager manager) {
+    System.out.println("ruff");
+    System.out.println("ruff");
+    takeABreath();
+    System.out.println("ruff");
+    System.out.println("ruff");
+    System.out.println("ruff");
+}
+```
+
+**Refactored Section:**
+```java
+public void barkBark(Dog dog) {
+    System.out.println("ruff");
+    System.out.println("ruff");
+    dog.takeABreath();
+    System.out.println("ruff");
+    System.out.println("ruff");
+    System.out.println("ruff");
+}
+```
+
+**Refactoring Type:** 
+- **Parameter Change**: The `barkBark` method in the `DogManager` class now takes a `Dog` object as a parameter instead of a `DogManager` object.
+- **Method Signature Change**: The method signature has been updated to reflect the new parameter.
+
+### Refactoring 3:
+**Original Section:**
+```java
+public void takeABreath() {
+    System.out.println("...");
+}
+```
+
+**Refactored Section:**
+```java
+dog.takeABreath();
+```
+
+**Refactoring Type:** 
+- **Method Call Change**: The `takeABreath` method call has been moved to the `DogManager` class and now calls the `takeABreath` method on the `Dog` object passed as a parameter.

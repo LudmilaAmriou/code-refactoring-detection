@@ -1,0 +1,19 @@
+- **Original Section:** 
+  ```java
+  package org.felines;
+
+  public interface Animal {
+      void action();
+  }
+  ```
+
+- **Refactored Section:** 
+  ```java
+  package org.felines;
+
+  public interface Animal extends AnimalSuper {
+  }
+  ```
+
+- **Refactoring Type:** 
+  - **Extract Superclass/Interface**: The `Animal` interface now extends an `AnimalSuper` interface. This is a refactoring where the original interface is extended to include methods or properties from another interface, effectively extracting common behavior into a superclass/interface.

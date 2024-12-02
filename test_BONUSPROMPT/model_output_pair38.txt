@@ -1,0 +1,16 @@
+### Refactoring Detected:
+
+1. **Refactoring Type:** Rename  
+   - **Original Section:**
+     ```java
+     public class Reptile {
+         // Class body...
+     }
+     ```
+   - **Refactored Section:**
+     ```java
+     public class TurtleMarinha {
+         // Class body...
+     }
+     ```
+   - **Description:** The class name `Reptile` has been renamed to `TurtleMarinha`. This is a simple renaming of the class.

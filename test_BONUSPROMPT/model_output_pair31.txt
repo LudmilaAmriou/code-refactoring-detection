@@ -1,0 +1,144 @@
+### Refactoring Detected:
+
+1. **Class/Packages**:
+   - **Original Section**: 
+     ```java
+     package org.reptile;
+     
+     public class Reptile {
+         // Class content
+     }
+     ```
+   - **Refactored Section**: 
+     ```java
+     package org.reptile;
+     
+     public class TurtleTerrarium extends Reptile {
+         // Class content
+     }
+     ```
+   - **Refactoring Type**: **Move**. The `Reptile` class has been moved to a new subclass named `TurtleTerrarium`.
+
+2. **Methods**:
+   - **Original Section**: 
+     ```java
+     public int getAge() {
+         return age;
+     }
+
+     public void setAge(int age) {
+         this.age = age;
+     }
+     ```
+   - **Refactored Section**: 
+     ```java
+     public int getAge() {
+         return age;
+     }
+
+     public void setAge(int age) {
+         this.age = age;
+     }
+     ```
+   - **Refactoring Type**: No change. The methods `getAge` and `setAge` remain unchanged.
+
+3. **Attributes**:
+   - **Original Section**: 
+     ```java
+     protected int age;
+     protected int name;
+     protected int spead;
+     protected String action;
+     ```
+   - **Refactored Section**: 
+     ```java
+     protected int age;
+     ```
+   - **Refactoring Type**: **Pull Up**. The attributes `name`, `spead`, and `action` have been moved to the superclass `Reptile`.
+
+4. **Methods**:
+   - **Original Section**: 
+     ```java
+     @Override
+     public String toString() {
+         return "Turtle [age=" + age + ", name=" + name + ", spead=" + spead
+                 + ", action=" + action + ", getAge()=" + getAge()
+                 + ", getName()=" + getName() + ", getSpead()=" + getSpead()
+                 + ", getAction()=" + getAction() + ", hashCode()=" + hashCode()
+                 + ", getClass()=" + getClass() + ", toString()="
+                 + super.toString() + "]";
+     }
+
+     @Override
+     public int hashCode() {
+         final int prime = 31;
+         int result = 1;
+         result = prime * result + ((action == null) ? 0 : action.hashCode());
+         result = prime * result + age;
+         result = prime * result + name;
+         result = prime * result + spead;
+         return result;
+     }
+
+     @Override
+     public boolean equals(Object obj) {
+         if (this == obj)
+             return true;
+         if (obj == null)
+             return false;
+         if (getClass() != obj.getClass())
+             return false;
+         TurtleMarinha other = (TurtleMarinha) obj;
+         if (action == null) {
+             if (other.action != null)
+                 return false;
+         } else if (!action.equals(other.action))
+             return false;
+         if (age != other.age)
+             return false;
+         if (name != other.name)
+             return false;
+         if (spead != other.spead)
+             return false;
+         return true;
+     }
+     ```
+   - **Refactored Section**: 
+     ```java
+     @Override
+     public String toString() {
+         return "Turtle [age=" + age + ", getAge()=" + getAge()
+                 + ", hashCode()=" + hashCode()
+                 + ", getClass()=" + getClass() + ", toString()="
+                 + super.toString() + "]";
+     }
+
+     @Override
+     public int hashCode() {
+         final int prime = 31;
+         int result = 1;
+         result = prime * result + ((action == null) ? 0 : action.hashCode());
+         result = prime * result + age;
+         return result;
+     }
+
+     @Override
+     public boolean equals(Object obj) {
+         if (this == obj)
+             return true;
+         if (obj == null)
+             return false;
+         if (getClass() != obj.getClass())
+             return false;
+         TurtleMarinha other = (TurtleMarinha) obj;
+         if (action == null) {
+             if (other.action != null)
+                 return false;
+         } else if (!action.equals(other.action))
+             return false;
+         if (age != other.age)
+             return false;
+         return true;
+     }
+     ```
+   - **Refactoring Type**: **Pull Up**. The methods `toString`, `hashCode`, and `equals` have been moved to the superclass `Reptile`.

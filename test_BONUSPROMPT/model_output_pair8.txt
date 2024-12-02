@@ -1,0 +1,23 @@
+- **Original Section:** 
+  ```java
+  package org.felines;
+
+  public interface Animal {
+  	
+  	void action();
+  }
+  ```
+
+- **Refactored Section:** 
+  ```java
+  package org.felines;
+
+  public interface AnimalSuper {
+
+  	void action();
+
+  }
+  ```
+
+- **Refactoring Type:** Rename  
+  The refactoring involves renaming the `Animal` interface to `AnimalSuper`.

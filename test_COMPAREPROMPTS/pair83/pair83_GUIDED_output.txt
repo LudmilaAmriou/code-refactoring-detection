@@ -1,0 +1,31 @@
+There is no refactoring.
+
+The provided code snippets for both the original and refactored classes are identical:
+
+Original Code:
+```java
+package org.animals;
+
+public class Duck extends Bird {
+
+	public void quack() {
+		System.out.println("quack");
+	}
+
+}
+```
+
+Refactored Code:
+```java
+package org.birds;
+
+public class Duck extends Bird {
+
+	public void quack() {
+		System.out.println("quack");
+	}
+
+}
+```
+
+The only difference is the package name, which has changed from `org.animals` to `org.birds`. This change does not constitute a refactoring according to the provided guidelines. Therefore, no refactorings are detected between the two code snippets.

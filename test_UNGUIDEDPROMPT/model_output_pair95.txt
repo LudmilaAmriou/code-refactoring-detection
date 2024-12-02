@@ -1,0 +1,38 @@
+- **Original Section:** 
+  ```java
+  public class Poodle extends Dog {
+  
+  	private int age = 0;
+  
+  	public int getAge() {
+  		return this.age;
+  	}
+  	
+  }
+  ```
+  
+- **Refactored Section:** 
+  ```java
+  public class Dog {
+  
+  	private int age = 0;
+  
+  	public int getAge() {
+  		return this.age;
+  	}
+
+  	public void bark() {
+  		System.out.println("ruff");
+  		System.out.println("ruff");
+  		System.out.println("...");
+  		System.out.println("ruff");
+  		System.out.println("ruff");
+  		System.out.println("ruff");
+  	}
+  
+  }
+  ```
+  
+- **Refactoring Type:** 
+  - **Class Renaming:** The class `Poodle` has been renamed to `Dog`.
+  - **Method Addition:** A new method `bark()` has been added to the `Dog` class.

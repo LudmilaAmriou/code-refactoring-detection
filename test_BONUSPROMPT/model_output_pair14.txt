@@ -1,0 +1,20 @@
+### Refactoring Detected:
+
+1. **Class Renaming**:
+   - **Original Section**: `public class Reptile extends AnimalMarilho {`
+   - **Refactored Section**: `public class TurtleTerrarium extends Reptile{`
+   - **Refactoring Type**: The class name has been changed from `Reptile` to `TurtleTerrarium`.
+
+2. **Method Extraction**:
+   - **Original Section**: None
+   - **Refactored Section**: 
+     ```java
+     public int getAge() {
+         return age;
+     }
+
+     public void setAge(int age) {
+         this.age = age;
+     }
+     ```
+   - **Refactoring Type**: The `age` attribute has been extracted into getter and setter methods.

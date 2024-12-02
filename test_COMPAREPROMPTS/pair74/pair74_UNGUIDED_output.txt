@@ -1,0 +1,52 @@
+### Refactoring Detected:
+
+1. **Refactoring Type:** Class Renaming  
+   - **Original Section:**
+     ```java
+     package org.felines;
+
+     public class Tiger extends Feline {
+         private int age;
+         private int name;
+
+         public int getAge() {
+             return age;
+         }
+         public void setAge(int age) {
+             this.age = age;
+         }
+         public int getName() {
+             return name;
+         }
+         public void setName(int name) {
+             this.name = name;
+         }
+     }
+     ```
+   - **Refactored Section:**
+     ```java
+     package org.felines;
+
+     public class Feline {
+         private int age;
+         private int name;
+
+         public int getAge() {
+             return age;
+         }
+         public void setAge(int age) {
+             this.age = age;
+         }
+         public int getName() {
+             return name;
+         }
+         public void setName(int name) {
+             this.name = name;
+         }
+
+         public void meow() {
+             System.out.println("meow");
+         }
+     }
+     ```
+   - **Refactoring Description:** The class `Tiger` has been renamed to `Feline`.

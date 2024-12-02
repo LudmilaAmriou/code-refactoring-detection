@@ -1,0 +1,96 @@
+### Refactoring Detected:
+
+1. **Refactoring Type:** Inheritance
+   - **Original Section:**
+     ```java
+     public class Turtle {
+     ```
+   - **Refactored Section:**
+     ```java
+     public class Turtle extends Reptile {
+     ```
+   - **Description:** The `Turtle` class now inherits from the `Reptile` class, indicating that it is a subclass of `Reptile`.
+
+2. **Refactoring Type:** Removal of Unnecessary Code
+   - **Original Section:**
+     ```java
+     public int getAge() {
+         return age;
+     }
+     public void setAge(int age) {
+         this.age = age;
+     }
+     public int getName() {
+         return name;
+     }
+     public void setName(int name) {
+         this.name = name;
+     }
+     public int getSpead() {
+         return spead;
+     }
+     public void setSpead(int spead) {
+         this.spead = spead;
+     }
+     public String getAction() {
+         return action;
+     }
+     public void setAction(String action) {
+         this.action = action;
+     }
+     ```
+   - **Refactored Section:** (No corresponding section in the refactored code)
+   - **Description:** The getter and setter methods for `age`, `name`, `spead`, and `action` have been removed from the `Turtle` class. This suggests that these properties are now managed by the superclass `Reptile`.
+
+3. **Refactoring Type:** Removal of Unnecessary Code
+   - **Original Section:**
+     ```java
+     @Override
+     public String toString() {
+         return "Turtle [age=" + age + ", name=" + name + ", spead=" + spead
+                 + ", action=" + action + ", getAge()=" + getAge()
+                 + ", getName()=" + getName() + ", getSpead()=" + getSpead()
+                 + ", getAction()=" + getAction() + ", hashCode()=" + hashCode()
+                 + ", getClass()=" + getClass() + ", toString()="
+                 + super.toString() + "]";
+     }
+     @Override
+     public int hashCode() {
+         final int prime = 31;
+         int result = 1;
+         result = prime * result + ((action == null) ? 0 : action.hashCode());
+         result = prime * result + age;
+         result = prime * result + name;
+         result = prime * result + spead;
+         return result;
+     }
+     @Override
+     public boolean equals(Object obj) {
+         if (this == obj)
+             return true;
+         if (obj == null)
+             return false;
+         if (getClass() != obj.getClass())
+             return false;
+         Turtle other = (Turtle) obj;
+         if (action == null) {
+             if (other.action != null)
+                 return false;
+         } else if (!action.equals(other.action))
+             return false;
+         if (age != other.age)
+             return false;
+         if (name != other.name)
+             return false;
+         if (spead != other.spead)
+             return false;
+         return true;
+     }
+     ```
+   - **Refactored Section:** (No corresponding section in the refactored code)
+   - **Description:** The `toString`, `hashCode`, and `equals` methods have been removed from the `Turtle` class. This suggests that these methods are now managed by the superclass `Reptile`.
+
+### Summary:
+- **Inheritance:** The `Turtle` class now extends `Reptile`.
+- **Code Removal:** Getter and setter methods for `age`, `name`, `spead`, and `action` have been removed.
+- **Code Removal:** `toString`, `hashCode`, and `equals` methods have been removed.
